@@ -1,0 +1,104 @@
+@import './base'
+
+.work-conatiner
+    @include flex(100%, fit-content, column)
+    align-items: center
+    justify-content: center
+
+    .title
+        padding: 3% 0
+
+        font-size: 30px
+        color: white
+
+    .work-wrapper
+        @include flex(100%, auto, row)
+        justify-content: center
+        align-items: center
+
+        .text
+            @include flex(50%,100%, column)
+            justify-content: center
+            gap: 10px
+
+            .name
+                font-size: 25px
+                color: $niceBlue
+
+            .time
+                font-size: 15px
+                color: white
+
+            .skills
+                @include flex(100%, fit-content, row)
+                flex-wrap: wrap
+                gap: 10px
+
+                .skill
+                    padding: 5px 10px
+
+                    font-size: 14px
+                    color: black
+
+                    background: $niceBlue
+                    border-radius: 10px
+
+            .description
+                font-size: 14px
+                color: white
+
+        img
+            height: 120px
+            margin-right: 20px
+
+            border-radius: 50%
+
+@media screen and (max-width: 980px)
+    .work-conatiner
+        width: 100%
+        min-height: 300px
+        margin: 5% 0
+
+        .title
+            font-size: 20px
+
+        .work-wrapper
+            width: 90%
+            flex-direction: column
+            align-self: center
+            padding-bottom: 50px
+
+            .text
+                align-items: center
+                width: 100%
+                padding-top: 10px
+
+                .name
+                    font-size: 18px
+
+                .time
+                    color: white
+                    font-size: 12px
+
+                .skills
+                    justify-content: center
+
+                    .skill
+                        padding: 3px 8px
+                        margin: 0 2px
+
+                        font-size: 10px
+                        color: black
+
+                        background: $niceBlue
+                        border-radius: 10px
+
+                .description
+                    text-align: center
+                    font-size: 12px
+                    color: white
+
+            img
+                height: 90px
+                border-radius: 50%
+                margin-right: 0px

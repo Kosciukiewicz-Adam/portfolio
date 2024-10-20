@@ -1,0 +1,112 @@
+@import './base.sass'
+
+.desktop-menu
+    @include flex(95%, 10%, row)
+    justify-content: flex-end
+    align-items: center
+    position: fixed
+
+    padding-right: 5%
+    
+    z-index: 10
+    user-select: none
+
+    font-size: 16px
+    background: rgba(0,2,27,0.8)
+    backdrop-filter: blur(2px)
+    transition: 1s
+
+    z-index: 10
+
+.phone-menu, .phone-menu-button
+    display: none
+
+.home
+    height: 15%
+    background: none
+
+@mixin active()
+    box-shadow: 0px 0px 5px #141414
+    border-radius: 20px
+
+    background: $niceBlue
+    color: white
+
+    &::before
+        @include pseudoElement(30%, 100%)
+
+        background: linear-gradient(to right,rgba(255,255,255,0), rgba(255,255,255,0.4))
+        transform: skewX(45deg)
+        z-index: 2
+
+        animation: 2s shine forwards
+
+
+.active
+    @include active()
+
+.link
+    @include grid(120px, 40px)
+    position: relative
+    margin: 0 5px
+
+    transition: 1s
+
+    overflow: hidden
+    
+
+    .text
+        text-decoration: none
+        color: white
+
+    &:hover
+        @include active()
+        cursor: pointer
+
+@keyframes shine
+    0%
+        left: -50%
+    100%
+        left: 60%
+
+@media screen and (max-width: 980px)
+    .desktop-menu
+        display: none
+
+    .phone-menu-button
+        @include grid(40px, 40px)
+        position: fixed
+        top: 10px
+        right: 10px
+        color: $niceBlue
+        font-size: 20px
+
+        border-radius: 50%
+        border: 2px solid $niceBlue
+        z-index: 4
+        background: black
+        transition: 0.3s
+
+        img
+            height: 60%
+
+        &:hover
+            cursor: pointer
+            background: #0c002b
+
+    .phone-menu
+        @include flex(100%, 100%, column)
+        position: fixed
+        z-index: 3
+        background: black
+
+        align-items: center
+        justify-content: space-evenly
+
+        .phone-menu-link
+            @include grid(100%, 40px)
+            color: white
+            font-size: 20px
+            &:hover
+                cursor: pointer
+        
