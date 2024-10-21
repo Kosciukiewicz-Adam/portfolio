@@ -25,7 +25,7 @@ const Skills = ({ forwardRef }) => {
                             className='skill'
                             key={skill.name}
                         >
-                            <img alt='skill' src={`./assets/${skill.name}.png`} />
+                            <img alt='skill' src={skill.imageSrc} />
                             <div className='label'>{skill.name}</div>
                         </div>)
                 }

@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos'
-
 import { contactData } from '../data'
-
 import '../styles/contact.sass'
 import 'aos/dist/aos.css'
+
+import email from "../assets/email.svg";
+import phone from "../assets/phone.svg";
+import github from "../assets/github.png";
+import linkedIn from "../assets/linkedIn.png";
+
 
 const Contact = ({ forwardRef }) => {
 
@@ -24,22 +28,22 @@ const Contact = ({ forwardRef }) => {
             <div className='title'>Kontakt</div>
 
             <div className='row to-coppy' onClick={() => navigator.clipboard.writeText(contactData.email)}>
-                <img src='./assets/email.svg' alt='icon' />
+                <img src={email} alt='icon' />
                 <div className='label'>{contactData.email}</div>
             </div>
 
             <div className='row to-coppy' onClick={() => navigator.clipboard.writeText(contactData.phone)}>
-                <img src='./assets/phone.svg' alt='icon' />
+                <img src={phone} alt='icon' />
                 <div className='label'>{contactData.phone}</div>
             </div>
 
             <div className='row' onClick={() => window.open(contactData.github, '_blank')}>
-                <img src='./assets/github.png' alt='icon' />
+                <img src={github} alt='icon' />
                 <div className='label'>{contactData.github.split('//')[1]}</div>
             </div>
 
             <div className='row' onClick={() => window.open(contactData.linkedIn, '_blank')}>
-                <img src='./assets/linkedIn.png' alt='icon' />
+                <img src={linkedIn} alt='icon' />
                 <div className='label'>LinkedIn</div>
             </div>
 

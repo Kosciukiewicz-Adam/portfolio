@@ -24,7 +24,7 @@ const Projects = ({ forwardRef }) => {
                     projects.map(project =>
                         <div className='project' key='project'>
                             <div className='frame'>
-                                <img alt='img' src={`./assets/${project.imgs[0]}`} />
+                                <img alt='img' src={project.imgs[0]} />
                             </div>
 
                             <div className='description'>
