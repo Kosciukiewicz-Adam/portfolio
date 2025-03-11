@@ -15,27 +15,52 @@ const Projects = ({ forwardRef }) => {
     return (
         <div className='projects-conatiner' ref={forwardRef}>
             <div className='title'>Projekty</div>
-            <div
-                className='projects-wrapper'
-                data-aos='zoom-in'
-                data-aos-anchor-placement="center-bottom"
-            >
+            <div className='projects-wrapper'>
                 {
                     projects.map(project =>
-                        <div className='project' key='project'>
-                            <div className='frame'>
-                                <img alt='img' src={project.imgs[0]} />
+                        <div
+                            className='project'
+                            key={project.name}
+                            data-aos='fade-up'
+                        >
+                            <div className='imagesWrapper'>
+                                <div className='image first' data-aos='fade-up'>
+                                    <img alt='img' src={project.imgs[0]} />
+                                </div>
+                                <div className='image second' data-aos='fade-up'>
+                                    <img alt='img' src={project.imgs[1]} />
+                                </div>
+                                <div className='image third' data-aos='fade-up'>
+                                    <img alt='img' src={project.imgs[2]} />
+                                </div>
                             </div>
 
                             <div className='description'>
-                                <div className='title'>{project.name}</div>
-                                <div className='skills'>
-                                    {project.skills.map(skill => <div className='skill' key={skill}>{skill}</div>)}
+                                {project.isComercial && <div className='comercialBand'>Projekt komercyjny</div>}
+                                <div className='title'>
+                                    {project.name}
                                 </div>
                                 <div className='text'>{project.description}</div>
+                                <div className='skills-wrapper'>
+                                    {project.skills.map(skill => (
+                                        <div
+                                            className={`skill ${skill.name}`}
+                                            key={skill.name + project.name}
+                                        >
+                                            <img alt='skill' src={skill.imageSrc} />
+                                            <div className='label'>{skill.name}</div>
+                                        </div>
+                                    ))}
+                                </div>
                                 <div className='buttonWrapper'>
-                                    <div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>Demo</div>
-                                    <div className='button' onClick={() => window.open(project.linkRepo, "_blank")}>Repo</div>
+                                    <div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
+                                        Sprawdź
+                                    </div>
+                                    {project?.linkRepo && (
+                                        <div className='button' onClick={() => window.open(project.linkRepo, "_blank")}>
+                                            Repozytorium
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>)

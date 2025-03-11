@@ -8,6 +8,7 @@ import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
 import github from "../assets/github.png";
 import linkedIn from "../assets/linkedIn.png";
+import cv from "../assets/cv.pdf";
 
 
 const Contact = ({ forwardRef }) => {
@@ -48,7 +49,7 @@ const Contact = ({ forwardRef }) => {
             </div>
 
             <div
-                onClick={() => window.open('./assets/cv.pdf', '_blank')}
+                onClick={() => window.open(cv, '_blank')}
                 className='button'
             >Obejrzyj moje CV</div>
         </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-
 import './styles/base.sass'
 
 import PhoneMenu from './components/PhoneMenu'
@@ -38,8 +37,9 @@ const App = () => {
       <Menu
         scroll={scroll}
         home={home}
-        skills={skills}
+        projects={projects}
         work={work}
+        skills={skills}
         contact={contact}
         setShowMenu={setShowMenu}
         showMenu={showMenu}
@@ -48,8 +48,9 @@ const App = () => {
         showMenu ?
           <PhoneMenu
             home={home}
-            skills={skills}
+            projects={projects}
             work={work}
+            skills={skills}
             contact={contact}
             setShowMenu={setShowMenu}
           ></PhoneMenu>
@@ -57,10 +58,10 @@ const App = () => {
           null
       }
       <>
-        <Home forwardRef={home} next={skills}></Home>
-        <Skills forwardRef={skills}></Skills>
+        <Home forwardRef={home} next={projects}></Home>
         <Projects forwardRef={projects}></Projects>
         <Work forwardRef={work}></Work>
+        <Skills forwardRef={skills}></Skills>
         <Contact forwardRef={contact}></Contact>
       </>
     </div>

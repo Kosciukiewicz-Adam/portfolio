@@ -11,6 +11,43 @@
         font-size: 30px
         color: white
 
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .vertical-timeline-element-date
+        color: white
+    
+    .vertical-timeline-element-icon
+        overflow: hidden
+
+    .vertical-timeline-element-subtitle
+        @include flex(100%, auto, row)
+        padding-top: 10px
+        gap: 10px
+        flex-wrap: wrap
+
+    .vertical-timeline-element-content
+        border-radius: 10px
+        background: none
+        color: white
+        box-shadow: none
+        border: 2px solid $niceBlue
+
+    .vertical-timeline-element-content-arrow
+        border-right: 7px solid $niceBlue
+
+    .vertical-timeline::before
+        background: $niceBlue
+
+    .skill
+        padding: 5px 10px
+        font-size: 14px
+        color: white
+        background: $niceBlue
+        border-radius: 10px
+
     .work-wrapper
         @include flex(100%, auto, row)
         justify-content: center
@@ -30,29 +67,11 @@
                 font-size: 15px
                 color: white
 
-            .skills
-                @include flex(100%, fit-content, row)
-                flex-wrap: wrap
-                gap: 10px
-
-                .skill
-                    padding: 5px 10px
-
-                    font-size: 14px
-                    color: black
-
-                    background: $niceBlue
-                    border-radius: 10px
+                
 
             .description
                 font-size: 14px
                 color: white
-
-        img
-            height: 120px
-            margin-right: 20px
-
-            border-radius: 50%
 
 @media screen and (max-width: 980px)
     .work-conatiner
@@ -96,9 +115,4 @@
                 .description
                     text-align: center
                     font-size: 12px
-                    color: white
-
-            img
-                height: 90px
-                border-radius: 50%
-                margin-right: 0px
+                    color: whith

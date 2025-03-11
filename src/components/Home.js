@@ -4,6 +4,7 @@ import { contactData } from "../data";
 import github from "../assets/github.png";
 import resume from "../assets/resume.svg";
 import arrow from "../assets/arrow.svg"
+import cv from "../assets/cv.pdf"
 
 const Home = ({ forwardRef, next }) => {
     return (
@@ -15,13 +16,13 @@ const Home = ({ forwardRef, next }) => {
                     alt='icon'
                 />
                 <img
-                    onClick={() => window.open('./assets/cv.pdf', '_blank')}
+                    onClick={() => window.open(cv, '_blank')}
                     src={resume}
                     alt='icon'
                 />
             </div>
             <div className='content'>
-                <div className='title'>Junior Front-End Developer</div>
+                <div className='title'>Front-End Developer</div>
                 <div className='sub-title'>Adam Kościukiewicz</div>
                 <div className='fast-access-mobile'>
                     <img
@@ -30,7 +31,7 @@ const Home = ({ forwardRef, next }) => {
                         alt='icon'
                     />
                     <img
-                        onClick={() => window.open('./assets/cv.pdf', '_blank')}
+                        onClick={() => window.open(cv, '_blank')}
                         src={resume}
                         alt='icon'
                     />

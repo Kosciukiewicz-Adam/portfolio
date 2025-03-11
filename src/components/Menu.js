@@ -5,8 +5,8 @@ import x from "../assets/x.svg";
 import menu from "../assets/menu.svg";
 
 const Menu = (props) => {
-
-    const [current, setCurrent] = useState('home')
+    const [current, setCurrent] = useState('home');
+    
     useEffect(() => {
         let refArray = Object.entries(props).filter(elem => typeof elem[1] === 'object')
 
