@@ -62,7 +62,7 @@ export const projects = [
             { name: 'React', imageSrc: react },
             { name: 'Figma', imageSrc: figma },
         ],
-        description: "Strona dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej, stwożenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz projstą customizacje strony oraz optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych. (Obecnie jest instancji testowej. Po zakończeniu testów, strona zostanie przeniesiona na docelową domenę i opublikowana na stałe.)",
+        description: "Strona dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej, stwożenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz projstą customizacje strony oraz optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych.",
         isComercial: true,
         linkDemo: "https://www.famille.pl/"
     }
