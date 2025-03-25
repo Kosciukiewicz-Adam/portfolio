@@ -30,9 +30,9 @@ const Projects = ({ forwardRef }) => {
                                 <div className='image second' data-aos='fade-up'>
                                     <img alt='img' src={project.imgs[1]} />
                                 </div>
-                                <div className='image third' data-aos='fade-up'>
-                                    <img alt='img' src={project.imgs[2]} />
-                                </div>
+                                {project?.imgs[2] && <div className='image third' data-aos='fade-up'>
+                                    <img alt='img' src={project?.imgs[2]} />
+                                </div>}
                             </div>
 
                             <div className='description'>
@@ -53,9 +53,9 @@ const Projects = ({ forwardRef }) => {
                                     ))}
                                 </div>
                                 <div className='buttonWrapper'>
-                                    <div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
+                                    {project?.linkDemo && (<div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
                                         Sprawdź
-                                    </div>
+                                    </div>)}
                                     {project?.linkRepo && (
                                         <div className='button' onClick={() => window.open(project.linkRepo, "_blank")}>
                                             Repozytorium

@@ -1,3 +1,5 @@
+import calculator1 from "./assets/calculator1.PNG";
+import calculator2 from "./assets/calculator2.PNG";
 import prestashop from "./assets/prestashop.png";
 import typescript from "./assets/TypeScript.png";
 import javascript from "./assets/JavaScript.png";
@@ -16,6 +18,7 @@ import mongodb from "./assets/MongoDB.png";
 import github from "./assets/github.png";
 import gitlab from "./assets/Gitlab.png";
 import jquery from "./assets/jQuery.png";
+import python from "./assets/python.png";
 import famille from "./assets/logo.png";
 import linux from "./assets/linux.png";
 import figma from "./assets/figma.png";
@@ -65,6 +68,16 @@ export const projects = [
         description: "Strona dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej, stwożenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz projstą customizacje strony oraz optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych.",
         isComercial: true,
         linkDemo: "https://www.famille.pl/"
+    },
+    {
+        imgs: [calculator2,calculator1],
+        name: "Kalkulator",
+        skills: [
+            { name: 'Python', imageSrc: python },
+        ],
+        description: "Kalkulator korzystający z własnych metod o obsługi obliczeń. Umożliwa dodawnie, mnożenie, dzielenie, odejmowanie. Obsługuje liczby z wartościami po przecinku jak również jednoczesne wykonywanie działań.",
+        isComercial: false,
+        linkRepo: "https://github.com/Kosciukiewicz-Adam/calculator"
     }
 ]
 
@@ -74,6 +87,7 @@ export const skills = [
     { name: 'HTML', imageSrc: html },
     { name: 'JQuery', imageSrc: jquery },
     { name: 'TypeScript', imageSrc: typescript },
+    { name: 'Python', imageSrc: python },
     { name: 'React', imageSrc: react },
     { name: 'Next', imageSrc: next },
     { name: 'Node', imageSrc: node },
