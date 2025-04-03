@@ -3,6 +3,7 @@ import calculator2 from "./assets/calculator2.PNG";
 import prestashop from "./assets/prestashop.png";
 import typescript from "./assets/TypeScript.png";
 import javascript from "./assets/JavaScript.png";
+import experience from "./assets/experience.png";
 import wordpress from "./assets/wordpress.png";
 import tailwind from "./assets/tailwind.png";
 import youtrack from "./assets/YouTrack.png";
@@ -124,7 +125,14 @@ export const employment = [
         logo: printbox,
     },
     {
-        name: 'Famille - Full Stack Developer, UI Designer - 2 miesiące',
+        name: 'Fundacja KAPITAŁ DLA INNOWACJI - 2 miesiące',
+        technologies: ["Generator wniosków IGA"],
+        description: 'Udział w sporządzeniu wniosku do Małopolskiego Centrum Przedsiębiorczości o dofinansowanie eksperymentalnych prac rozwojowego z dziedziny oprogramowania komputerowego, w ramach konkursu Fundusze Europejskie dla Małopolski 2021-2027 Działanie 1.1 Projekty badawczo-rozwojowe przedsiębiorstw. Tytuł projektu: „Zakupy360.ai - otwarta platforma sourcingowa dla przedsiębiorstw B2B." Praca z wykorzystaniem generatora wniosków w systemie IGA.',
+        time: '12.2024 – 01.2025',
+        logo: experience,
+    },
+    {
+        name: 'Famille - Full Stack Developer, UI Designer - 3 miesiące',
         technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node', "Figma", "Github"],
         description: 'Wykonanie strony na zlecene dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej famille.pl, stworzenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz prostą edycje strony i optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych.',
         time: '12.2024 – 02.2025',
@@ -132,9 +140,9 @@ export const employment = [
     },
     {
         name: 'Analityk systemowy - 2 miesiące',
-        technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node', "Figma", "Github"],
-        description: 'Stworzenie specyfikacji wymagań oprogramowania dla fotografów. Zbieranie danych koniecznych do stworzenia specyfikacji na podstawie analizy narzędzi dostępnych na rynku i spotkań z klientem. Tworzenie specyfikacji w oparciu o zebrane dane oraz kilkuletnie doświadczenie programistyczne.',
-        time: '2.2024 – 03.2025',
+        description: 'Stworzenie specyfikacji wymagań użytkownika i wymagań funkcjonalnych dla branżowego oprogramowania do świadczenia usług drogą elektroniczną w modelu SaaS. Zbieranie danych koniecznych do stworzenia specyfikacji na podstawie analizy narzędzi dostępnych na rynku oraz rozmów z klientem. Tworzenie specyfikacji w oparciu o zebrane dane oraz kilkuletnie doświadczenie programistyczne. Projekt jest nadal kontynuowany.',
+        time: '2.2025 – 04.2025',
+        logo: experience,
     }
 ]
 
