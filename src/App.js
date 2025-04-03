@@ -18,16 +18,42 @@ const App = () => {
   const home = useRef()
   const work = useRef()
 
+  const getFormattedDateTime = () => {
+    const date = new Date();
+    const formattedDate = date.toLocaleDateString("de-DE");
+    const formattedTime = date.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+    return `${formattedDate} ${formattedTime}`;
+  };
 
-  const html = document.getElementsByTagName('html')[0]
-
+  const html = document.getElementsByTagName('html')[0];
 
   useEffect(() => {
     const event = () => setScroll(html.scrollTop)
-
-    window.addEventListener('scroll', event)
-
+    window?.addEventListener('scroll', event)
+    
     return () => window.removeEventListener('scroll', event)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
+  useEffect(() => {
+    (async() => {
+      const locationReq = await fetch("https://ipapi.co/json/");
+      const locationData = await locationReq.json();
+
+      const visitData = {
+        location: locationData.city,
+        ip: locationData.ip,
+        date: getFormattedDateTime(),
+      }
+
+      await fetch("https://topo-server-py.onrender.com/stats", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(visitData),
+      });
+    })()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
