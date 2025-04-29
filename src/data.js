@@ -11,11 +11,14 @@ import recodeit from "./assets/recodeit.png";
 import famille1 from "./assets/famille1.PNG";
 import famille2 from "./assets/famille2.PNG";
 import famille3 from "./assets/famille3.PNG";
-import printbox from "./assets/printbox.png"
+import printbox from "./assets/printbox.png";
 import restApi from "./assets/REST API.png";
+import rappel3 from "./assets/rappel3.png";
+import rappel2 from "./assets/rappel2.png";
 import express from "./assets/express.png";
 import cypress from "./assets/cypress.png";
 import mongodb from "./assets/MongoDB.png";
+import rappel1 from "./assets/rappel.png";
 import github from "./assets/github.png";
 import gitlab from "./assets/Gitlab.png";
 import jquery from "./assets/jQuery.png";
@@ -69,6 +72,16 @@ export const projects = [
         description: "Strona dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej, stwożenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz projstą customizacje strony oraz optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych.",
         isComercial: true,
         linkDemo: "https://www.famille.pl/"
+    },
+    {
+        imgs: [rappel1,rappel2, rappel3],
+        name: "Rappel",
+        skills: [
+            { name: 'React Native', imageSrc: react },
+        ],
+        description: "Aplikacja do treningu interwałowego. Umożliwia tworzenie i zarządzanie własnymi presetami, zaawansowane wsparcie w treningu i szerokie możliwości dostosowania",
+        isComercial: false,
+        //linkRepo: "https://github.com/Kosciukiewicz-Adam/calculator"
     },
     {
         imgs: [calculator2,calculator1],
