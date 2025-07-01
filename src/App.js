@@ -64,7 +64,7 @@ const App = () => {
         scroll={scroll}
         home={home}
         projects={projects}
-        work={work}
+        // work={work}
         skills={skills}
         contact={contact}
         setShowMenu={setShowMenu}
@@ -75,7 +75,7 @@ const App = () => {
           <PhoneMenu
             home={home}
             projects={projects}
-            work={work}
+            // work={work}
             skills={skills}
             contact={contact}
             setShowMenu={setShowMenu}
@@ -86,7 +86,7 @@ const App = () => {
       <>
         <Home forwardRef={home} next={projects}></Home>
         <Projects forwardRef={projects}></Projects>
-        <Work forwardRef={work}></Work>
+        {/* <Work forwardRef={work}></Work> */}
         <Skills forwardRef={skills}></Skills>
         <Contact forwardRef={contact}></Contact>
       </>

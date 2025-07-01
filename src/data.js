@@ -40,7 +40,7 @@ import sql from "./assets/SQL.png";
 export const menuLinks = [
     { name: 'Home', scrollTo: 'home' },
     { name: 'Projekty', scrollTo: 'projects' },
-    { name: 'Doświadczenie', scrollTo: 'work' },
+    // { name: 'Doświadczenie', scrollTo: 'work' },
     { name: 'Umiejętości', scrollTo: 'skills' },
     { name: 'Kontakt', scrollTo: 'contact' },
 ]
