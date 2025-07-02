@@ -11,7 +11,7 @@ import linkedIn from "../assets/linkedIn.png";
 import cv from "../assets/cv.pdf";
 
 
-const Contact = ({ forwardRef }) => {
+const Contact = ({ forwardRef, selectedLanguage }) => {
 
     useEffect(() => {
         Aos.init({
@@ -26,7 +26,9 @@ const Contact = ({ forwardRef }) => {
             data-aos-anchor-placement="center-bottom"
             ref={forwardRef}
         >
-            <div className='title'>Kontakt</div>
+            <div className='title'>
+                {selectedLanguage === "ENG" ? "Contact" : "Kontakt"}
+            </div>
 
             <div className='row to-coppy' onClick={() => navigator.clipboard.writeText(contactData.email)}>
                 <img src={email} alt='icon' />
@@ -51,7 +53,9 @@ const Contact = ({ forwardRef }) => {
             <div
                 onClick={() => window.open(cv, '_blank')}
                 className='button'
-            >Obejrzyj moje CV</div>
+            >
+                {selectedLanguage === "ENG" ? "See my resume" : "Obejrzyj moje CV"}
+            </div>
         </div>
     )
 }

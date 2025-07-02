@@ -18,6 +18,25 @@
 
     z-index: 10
 
+.languageSelector
+    display: flex
+    flex-direction: row
+    gap: 8px
+    padding-right: 20px
+
+    img
+        width: 50px
+        object-fit: cover
+        border-radius: 4px
+        opacity: 0.5
+        cursor: pointer
+        transition: 0.7s
+
+        &:hover
+            opacity: 1
+        &.active
+            opacity: 1
+
 .phone-menu, .phone-menu-button
     display: none
 

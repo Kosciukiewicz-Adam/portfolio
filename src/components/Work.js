@@ -5,14 +5,15 @@ import { employment } from '../data'
 import '../styles/work.sass'
 import 'aos/dist/aos.css'
 
-const Work = ({ forwardRef }) => {
+const Work = ({ forwardRef, selectedLanguage }) => {
     return (
         <div
             className='work-conatiner'
             ref={forwardRef}
         >
-            <div className='title'>Doświadczenie zawodowe: +3 lata</div>
-
+            <div className='title'>
+                {selectedLanguage === "ENG" ? "Comercial experience: +3 years" : "Doświadczenie zawodowe: +3 lata"}
+            </div>
             <VerticalTimeline>
             {employment.map(work => (
                 <VerticalTimelineElement
@@ -32,7 +33,7 @@ const Work = ({ forwardRef }) => {
                         ))}
                     </h4>}
                     <p className="vertical-timeline-element-description">
-                        {work.description}
+                        {work.description[selectedLanguage]}
                     </p>
                 </VerticalTimelineElement>
             ))}

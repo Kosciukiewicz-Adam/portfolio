@@ -9,8 +9,10 @@ import Home from './components/Home'
 import Work from './components/Work'
 import Projects from './components/Projects'
 
+
 const App = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("ENG");
   const [scroll, setScroll] = useState(0)
   const projects = useRef()
   const contact = useRef()
@@ -64,10 +66,12 @@ const App = () => {
         scroll={scroll}
         home={home}
         projects={projects}
-        // work={work}
+        work={work}
         skills={skills}
         contact={contact}
         setShowMenu={setShowMenu}
+        setSelectedLanguage={setSelectedLanguage}
+        selectedLanguage={selectedLanguage}
         showMenu={showMenu}
       ></Menu>
       {
@@ -75,20 +79,36 @@ const App = () => {
           <PhoneMenu
             home={home}
             projects={projects}
-            // work={work}
+            work={work}
             skills={skills}
             contact={contact}
             setShowMenu={setShowMenu}
+            selectedLanguage={selectedLanguage}
           ></PhoneMenu>
           :
           null
       }
       <>
-        <Home forwardRef={home} next={projects}></Home>
-        <Projects forwardRef={projects}></Projects>
-        {/* <Work forwardRef={work}></Work> */}
-        <Skills forwardRef={skills}></Skills>
-        <Contact forwardRef={contact}></Contact>
+        <Home
+          forwardRef={home}
+          next={projects}
+        />
+        <Projects
+          selectedLanguage={selectedLanguage}
+          forwardRef={projects}
+        />
+        <Work
+          selectedLanguage={selectedLanguage}
+          forwardRef={work}
+        />
+        <Skills
+          selectedLanguage={selectedLanguage}
+          forwardRef={skills}
+        />
+        <Contact
+          selectedLanguage={selectedLanguage}
+          forwardRef={contact}
+        />
       </>
     </div>
   );

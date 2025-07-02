@@ -34,14 +34,28 @@ const Menu = (props) => {
     return (
         <>
             <div className={`${props.scroll < 100 ? 'home' : ''} desktop-menu`}>
+                <div className="languageSelector">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/960px-Flag_of_Poland.svg.png"
+                        className={props.selectedLanguage === "PL" ? "active": ""}
+                        onClick={()=> props.setSelectedLanguage("PL")}
+                        alt="pl"
+                    />
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                        className={props.selectedLanguage === "ENG" ? "active": ""}
+                        onClick={()=> props.setSelectedLanguage("ENG")}
+                        alt="eng"
+                    />
+                </div>
                 {
                     menuLinks.map(link =>
                         <div
                             className={`link ${current === link.scrollTo ? 'active' : ''}`}
-                            key={link.name}
+                            key={link.scrollTo}
                             onClick={() => handleClick(link.scrollTo)}
                         >
-                            <div className='text'>{link.name}</div>
+                            <div className='text'>{link.name[props.selectedLanguage]}</div>
                         </div>
                     )
                 }

@@ -20,9 +20,9 @@ const PhoneMenu = (props) => {
                 <div 
                     onClick={()=> handleClick(link.scrollTo)}
                     className='phone-menu-link'
-                    key={link.name}
+                    key={link.scrollTo}
                 >
-                    {link.name}
+                    {link.name[props.selectedLanguage]}
                 </div>)
             }
         </div>

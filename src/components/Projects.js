@@ -6,7 +6,7 @@ import { projects } from '../data'
 import '../styles/projects.sass'
 import 'aos/dist/aos.css'
 
-const Projects = ({ forwardRef }) => {
+const Projects = ({ forwardRef, selectedLanguage }) => {
     useEffect(() => {
         Aos.init({
             duration: 1000
@@ -14,7 +14,9 @@ const Projects = ({ forwardRef }) => {
     }, [])
     return (
         <div className='projects-conatiner' ref={forwardRef}>
-            <div className='title'>Projekty</div>
+            <div className='title'>
+                {selectedLanguage === "ENG" ? "Projects" : "Projekty"}
+            </div>
             <div className='projects-wrapper'>
                 {
                     projects.map(project =>
@@ -36,11 +38,15 @@ const Projects = ({ forwardRef }) => {
                             </div>
 
                             <div className='description'>
-                                {project.isComercial && <div className='comercialBand'>Projekt komercyjny</div>}
+                                {project.isComercial &&
+                                    <div className='comercialBand'>
+                                        {selectedLanguage === "ENG" ? "Comercial project" : "Projekt komercyjny"}
+                                    </div>
+                                }
                                 <div className='title'>
                                     {project.name}
                                 </div>
-                                <div className='text'>{project.description}</div>
+                                <div className='text'>{project.description[selectedLanguage]}</div>
                                 <div className='skills-wrapper'>
                                     {project.skills.map(skill => (
                                         <div
@@ -54,11 +60,11 @@ const Projects = ({ forwardRef }) => {
                                 </div>
                                 <div className='buttonWrapper'>
                                     {project?.linkDemo && (<div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
-                                        Sprawdź
+                                        {selectedLanguage === "ENG" ? "Check out" : "Zobacz"}
                                     </div>)}
                                     {project?.linkRepo && (
                                         <div className='button' onClick={() => window.open(project.linkRepo, "_blank")}>
-                                            Repozytorium
+                                           {selectedLanguage === "ENG" ? "Repository" : "Repozytorium"} 
                                         </div>
                                     )}
                                 </div>

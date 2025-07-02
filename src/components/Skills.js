@@ -6,7 +6,7 @@ import { skills } from '../data'
 import '../styles/skills.sass'
 import 'aos/dist/aos.css'
 
-const Skills = ({ forwardRef }) => {
+const Skills = ({ forwardRef, selectedLanguage }) => {
     useEffect(() => {
         Aos.init({
             duration: 1000
@@ -15,7 +15,9 @@ const Skills = ({ forwardRef }) => {
     return (
         <div className='skills-container' ref={forwardRef}>
             <div className='description'>
-                <div className='title'>Umiejętości</div>
+                <div className='title'>
+                    {selectedLanguage === "ENG" ? "Skills" : "Umiejętości"}
+                </div>
             </div>
             <div className='skills-wrapper'>
                 {
@@ -26,8 +28,11 @@ const Skills = ({ forwardRef }) => {
                             key={skill.name}
                         >
                             <img alt='skill' src={skill.imageSrc} />
-                            <div className='label'>{skill.name}</div>
-                        </div>)
+                            <div className='label'>
+                                {skill.name}
+                            </div>
+                        </div>
+                    )
                 }
             </div>
         </div>
