@@ -23,7 +23,7 @@ const Work = ({ forwardRef, selectedLanguage }) => {
                     icon={work?.logo ? <img alt='work' src={work.logo} /> : <></>}
                 >
                     <h3 className="vertical-timeline-element-title">
-                        {work.name}
+                        {work.name[selectedLanguage]}
                     </h3>
                     {work?.technologies && <h4 className="vertical-timeline-element-subtitle">
                         {work.technologies.map(tech => (
