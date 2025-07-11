@@ -162,7 +162,10 @@ export const skills = [
 
 export const employment = [
     {
-        name: 'ReCodeIT - Full Stack Developer - 7 miesięcy',
+        name: {
+            PL: 'ReCodeIT - Full Stack Developer - 7 miesięcy',
+            ENG: 'ReCodeIT - Full Stack Developer - 7 months',
+        },
         technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node'],
         description: {
             PL: 'Rozwijanie serwisu internetowego Dyktanda.pl. - tworzenie gier logicznych odstrony interfejsu użytkownika, obsługi kreacji poziomów w cms oraz zapisywania, porównywania i oceniania wyników przejść w części backendowej projektu. Przeprowadzenie integracji z serwisem mailingowym. Wprowadzenie modułu kodów promocyjnych na subskrypcje dla użytkowników',
@@ -172,7 +175,10 @@ export const employment = [
         logo: recodeit,
     },
     {
-        name: 'Printbox - Frontend Developer - 2 lata i 2 miesiące',
+        name: {
+            PL: 'Printbox - Frontend Developer - 2 lata i 2 miesiące',
+            ENG: 'Printbox - Frontend Developer - 2 yeas, 2 months',
+        },
         technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node', "Prestashop", "Wordpress", "Next.js", "Jest", "Cypress", "Figma", "Gitlab", "Youtrack", "Linux"],
         description: {
             PL: 'Tworzenie redesignów ścieżek zakupowych klientów w oparciu o projekty graficzne. Pisanie customowych komponentów Reactowych obsługiwanych z poziomu cms. Tworzenie skryptów sterujących personalizacją cech produktów na ścieżkach zakupowych. Dodawanie analityki. Tworzenie testów A/B. Pisanie testów automatycznych i jednostkowych (Jest, Cypress). Rozwój strony firmowej w Next.js. Wprowadzanie zmian oraz optymalizacji pod kątem SEO w wordpressie.',
@@ -182,17 +188,23 @@ export const employment = [
         logo: printbox,
     },
     {
-        name: 'Fundacja KAPITAŁ DLA INNOWACJI - 2 miesiące',
+        name: {
+            PL: "Fundacja KAPITAŁ DLA INNOWACJI - 4 miesiące",
+            ENG: "Fundacja KAPITAŁ DLA INNOWACJI - 4 months",
+        },
         technologies: ["Generator wniosków IGA"],
         description: {
             PL: "Praca nad wnioskami o dofinansowanie projektów bezpośrednio związanych z sektorem IT: Udział w przygotowaniu wniosku do Małopolskiego Centrum Przedsiębiorczości o dofinansowanie prac rozwojowych o charakterze eksperymentalnym w zakresie oprogramowania komputerowego, w ramach konkursu „Fundusze Europejskie dla Małopolski 2021-2027”, Działanie 1.1: Projekty badawczo-rozwojowe przedsiębiorstw. Tytuł projektu: „Zakupy360.ai – otwarta platforma sourcingowa dla przedsiębiorstw B2B”. Prace realizowane z wykorzystaniem generatora wniosków w systemie IGA. Udział w przygotowaniu wniosku do Polskiej Agencji Rozwoju Przedsiębiorczości o dofinansowanie udziału w międzynarodowych targach i misjach gospodarczych w USA, Europie i na Tajwanie, w ramach Działania FENG 2.25: Promocja marki innowacyjnych MŚP. Tytuł projektu: „Udział WILK ELEKTRONIK S.A. w wydarzeniach wspierających promocję produktów oraz rozwój działań eksportowych”. Prace realizowane z wykorzystaniem generatora wniosków w systemie LSI.",
             ENG: "Working on applications related to project funding directly connected to the IT sector: Participation in the preparation of an application to the Małopolska Centre for Entrepreneurship for funding experimental development work in the field of computer software, as part of the “European Funds for Małopolska 2021-2027” competition, Measure 1.1: Research and Development Projects of Enterprises. Project title: “Zakupy360.ai – an open sourcing platform for B2B enterprises.” Work conducted using the application generator within the IGA system. Participation in the preparation of an application to the Polish Agency for Enterprise Development for funding participation in international trade fairs and economic missions in the USA, Europe, and Taiwan, as part of Measure FENG 2.25: Promotion of the Brand of Innovative SMEs. Project title: “Participation of WILK ELEKTRONIK S.A. in events supporting product promotion and the development of export activities.” Work conducted using the application generator within the LSI system. ",
         },
-        time: '12.2024 – 01.2025 and 12.2024 - 02.2025',
+        time: ' 12.2024 - 02.2025 & 05.2025 - 06.2025',
         logo: experience,
     },
     {
-        name: 'Famille - Full Stack Developer, UI Designer - 3 miesiące',
+        name: {
+            PL: 'Famille - Full Stack Developer, UI Designer - 3 miesiące',
+            ENG: 'Famille - Full Stack Developer, UI Designer - 3 moths'
+        },
         technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node', "Figma", "Github"],
         description: {
             PL: "Wykonanie strony na zlecene dla firmy zajmującej się opieką nad osobami starszymi. Zlecenie objęło wykonanie projektu graficznego strony w figmie, wykonanie strony internetowej famille.pl, stworzenie customowego CMSa umożliwiającego zmianę treści, zdjęć oraz prostą edycje strony i optymalizacje pod kątem SEO. Strona jest dostępna w 5 różnych wersjach językowych.",
@@ -202,12 +214,15 @@ export const employment = [
         logo: famille,
     },
     {
-        name: 'Analityk systemowy - 2 miesiące',
+        name: {
+            PL: 'Analityk systemowy - 3 miesiące',
+            ENG: 'Analityk systemowy - 3 months',
+        },
         description: {
             PL: 'Stworzenie specyfikacji wymagań użytkownika i wymagań funkcjonalnych dla branżowego oprogramowania do świadczenia usług drogą elektroniczną w modelu SaaS. Zbieranie danych koniecznych do stworzenia specyfikacji na podstawie analizy narzędzi dostępnych na rynku oraz rozmów z klientem. Tworzenie specyfikacji w oparciu o zebrane dane oraz kilkuletnie doświadczenie programistyczne. Projekt jest nadal kontynuowany.',
             ENG: "Creating user requirements and functional specifications for industry-specific software providing services electronically in a SaaS model. Collecting necessary data for the specification based on the analysis of available market tools and discussions with the client. Developing the specification based on the gathered data and several years of programming experience. The project is still ongoin",
         },
-        time: '2.2025 – 04.2025',
+        time: '02.2025 – 04.2025',
         logo: experience,
     }
 ]
