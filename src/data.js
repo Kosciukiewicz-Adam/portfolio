@@ -163,8 +163,8 @@ export const skills = [
 export const employment = [
     {
         name: {
-            PL: 'ReCodeIT - Full Stack Developer - 7 miesięcy',
-            ENG: 'ReCodeIT - Full Stack Developer - 7 months',
+            PL: 'ReCodeIT - Full Stack Developer - 8 miesięcy',
+            ENG: 'ReCodeIT - Full Stack Developer - 8 months',
         },
         technologies: ['React', 'TypeScript', 'Sass', 'MongoDB', 'Node'],
         description: {
