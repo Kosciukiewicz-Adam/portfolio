@@ -62,6 +62,9 @@ const Projects = ({ forwardRef, selectedLanguage }) => {
                                     {project?.linkDemo && (<div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
                                         {selectedLanguage === "ENG" ? "Check out" : "Zobacz"}
                                     </div>)}
+                                    {project?.linkDemo2 && (<div className='button' onClick={() => window.open(project.linkDemo, "_blank")}>
+                                        {"CMS Demo"}
+                                    </div>)}
                                     {project?.linkRepo && (
                                         <div className='button' onClick={() => window.open(project.linkRepo, "_blank")}>
                                            {selectedLanguage === "ENG" ? "Repository" : "Repozytorium"} 

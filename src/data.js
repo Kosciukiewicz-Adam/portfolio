@@ -103,7 +103,8 @@ export const projects = [
             ENG: "A website for a company providing care for the elderly. The project included creating a graphic design in Figma, developing the website, building a custom CMS that allows editing content, images, and simple customization of the site, as well as SEO optimization. The website is available in five different language versions.",
         },
         isComercial: true,
-        linkDemo: "https://www.famille.pl/"
+        linkDemo: "https://www.famille.pl/",
+        linkDemo2: "https://cms-demo-sandy.vercel.app/",
     },
     {
         imgs: [rappel1,rappel2, rappel3],
